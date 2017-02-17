@@ -1,0 +1,83 @@
+﻿<!DOCTYPE HTML>
+<html lang=zh-cn xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset=utf-8>
+    <title>懒人LOFT</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            $(".produter").mouseenter(function(){
+                $(".produter").css({"color":"#85c81d","fontSize":"30px"});
+            })
+            $("#nav-r").mouseenter(function(){
+                $("#nav-r ul").stop().animate({"opacity":1},1000)
+            });
+            $("#nav-r").mouseleave(function(){
+                $("#nav-r ul").stop().animate({"opacity":0},1000)
+            });
+            $("#nav-r li").mouseenter(function(){
+                $(this).css({"fontSize":"40px"}).siblings().css({"fontSize":"20px"});
+            })
+            $("#nav-r li").mouseleave(function(){
+                $(this).css({"fontSize":"20px"});
+            })
+            $(".nav-box-left").mouseenter(function(){
+                $(".nav-box-left").stop().animate({"left":"1150px","top":"500px"},2000,function(){
+                    $(".nav-box-left").stop().animate({"left":"0px","top":"0px"},2000);
+                });
+            })
+            var timer = setTimeout(function(){
+                $(".vid").stop().animate({"marginLeft":"0px"},3500)
+            },10)
+            var timme = setTimeout(function(){
+                $(".nav-box-left").stop().animate({"left":"1150px","top":"500px"},2000,function(){
+                    $(".nav-box-left").stop().animate({"left":"0px","top":"0px"},2000);
+                });
+            },10)
+        })
+
+    </script>
+</head>
+<body>
+<!--nav 部分-->
+<div class="nav-box" id="nav-r">
+    <span><img src="images/logo1.png" alt=""/></span>
+    <div class="nav-box-left"></div>
+    <!--nav 右侧-->
+    <div class="nav-box-r">
+        <ul>
+            <li><a href="music/index.html">Music</a></li>
+            <li><a href="cartton/index.html">Cartoon</a></li>
+            <li><a href="stars/index.html" target = "_black">Stars</a></li>
+            <li><a href="traval/index.html">Traval</a></li>
+            <li><a href="rock/index.html">ROCK</a></li>
+        </ul>
+    </div>
+
+</div>
+<!--video 部分-->
+<div class="vid">
+    <video width="1000" height="500" autoplay loop = "loop">
+        <source src="video/John Legend - All Of Me~1.mp4" type="video/mp4">
+    </video>
+</div>
+<!--右侧下拉框部分-->
+<div class="produter"><a class="main" href="#">懒人LIFE</a>
+    <div class="sub first"><img src="images/music.png" alt="" class="IMG"/>
+        <p><a href="music/index.html">音乐LOFT</br></a>倾尽全力只为我当初的梦想！</p>
+        <div class="sub even"><img src="images/chuang.png" alt="" class="IMG"/><p><a href="cartton/index.html">动漫LOFT</br></a>肥宅不是很懂你们现充！</p>
+            <div class="sub odd"><img src="images/yu.png" alt="" class="IMG"/><p><a href="stars/index.html" target = "_black">个人LOFT</br></a>只有自己佩服自己，才能让别人信服你！迷之自信</p>
+                <div class="sub even"><img src="images/fang.png" alt="" class="IMG"/><p><a href="rock/index.html">激情LOFT</br></a>完全不知道什么叫累</p>
+                    <div class="sub odd last"><img src="images/zhuo.png" alt="" class="IMG"/><p><a href="traval/index.html">游记LOFT</br></a>我曾经跨过山河大海，走过的路，翻过的山，经历过就是幸福！</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+</body>
+</html>
